@@ -19,6 +19,12 @@ endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'mattn/sonictemplate-vim'
 
 call neobundle#end()
 set laststatus=2
