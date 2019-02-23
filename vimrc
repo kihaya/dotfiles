@@ -8,25 +8,17 @@ set noswapfile "swpファイルをつくらない
 set autoread "編集ファイル自動読み込み
 syntax on "コードハイライトを有効
 
-" Neobundleの設定
-" curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
-" . install.sh
-filetype plugin indent off
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle'))
-endif
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
+   Plug 'itchyny/lightline.vim'
+   Plug 'airblade/vim-gitgutter'
+   Plug 'tpope/vim-fugitive'
+   Plug 'thinca/vim-quickrun'
+   Plug 'tpope/vim-rails'
+   Plug 'slim-template/vim-slim'
+   Plug 'mattn/sonictemplate-vim'
+call plug#end()
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'mattn/sonictemplate-vim'
-
-call neobundle#end()
 set laststatus=2
 
 color desert " koehlerもおすすめ
