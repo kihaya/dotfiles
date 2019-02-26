@@ -23,18 +23,3 @@ call plug#end()
 set laststatus=2
 
 color desert " koehlerもおすすめ
-
-"j連打でエスケープモード
-inoremap jj <Esc>
-
-"軍曹モード 矢印キーでの操作を強制的に無効にする
-"========================
-map <UP> <ESC>
-map! <UP> <ESC>
-map <DOWN> <ESC>
-map! <DOWN> <ESC>
-map <LEFT> <ESC>
-map! <LEFT> <ESC>
-map <RIGHT> <ESC>
-map! <RIGHT> <ESC>
-"========================
