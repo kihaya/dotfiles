@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
    Plug 'airblade/vim-gitgutter'
    Plug 'tpope/vim-fugitive'
    Plug 'thinca/vim-quickrun'
+   Plug 'sheerun/vim-polyglot'
    Plug 'tpope/vim-rails'
    Plug 'slim-template/vim-slim'
    Plug 'mattn/sonictemplate-vim'
