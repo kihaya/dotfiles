@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
    Plug 'thinca/vim-quickrun'
    Plug 'sheerun/vim-polyglot'
    Plug 'tpope/vim-rails'
+   Plug 'tpope/vim-fireplace'
    Plug 'slim-template/vim-slim'
    Plug 'mattn/sonictemplate-vim'
 call plug#end()
