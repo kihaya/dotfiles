@@ -19,6 +19,8 @@ call plug#begin('~/.vim/plugged')
    Plug 'tpope/vim-fireplace'
    Plug 'slim-template/vim-slim'
    Plug 'mattn/sonictemplate-vim'
+   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+   Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set laststatus=2
