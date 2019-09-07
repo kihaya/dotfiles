@@ -6,6 +6,10 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+[merge]
+	ff = false
+[pull]
+	ff = only
 [alias]
         st  = status
         sts = status --short
