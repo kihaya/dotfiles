@@ -21,6 +21,7 @@ call plug#begin('~/.vim/plugged')
    Plug 'mattn/sonictemplate-vim'
    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
    Plug 'junegunn/fzf.vim'
+   Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 set laststatus=2
