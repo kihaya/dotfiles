@@ -41,7 +41,11 @@ let g:asyncomplete_log_file = expand('/tmp/asyncomplete.log')
 
 " See :help vim-lsp
 nnoremap def  :LspDefinition<CR>
+nnoremap pdef :LspPeekDefinition<CR>
+nnoremap rename :LspRename<CR>
 nnoremap refs :LspReferences<CR>
+nnoremap dsym :LspDocumentSymbol<CR>
+nnoremap wsym :LspWorkspaceSymbol<CR>
 
 " For Ruby LS
 " solargraph config command for project setup
