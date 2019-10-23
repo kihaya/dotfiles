@@ -22,8 +22,37 @@ call plug#begin('~/.vim/plugged')
    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
    Plug 'junegunn/fzf.vim'
    Plug 'easymotion/vim-easymotion'
+   " For LSP, using vim-lsp
+   Plug 'prabirshrestha/vim-lsp'
+   Plug 'prabirshrestha/async.vim'
+   Plug 'prabirshrestha/asyncomplete.vim'
+   Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 
 set laststatus=2
 
 color desert " koehlerもおすすめ
+
+" vim-lsp Setup
+let g:lsp_diagnostics_enabled = 0
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('/tmp/vim-lsp.log')
+let g:asyncomplete_log_file = expand('/tmp/asyncomplete.log')
+
+" See :help vim-lsp
+nnoremap def  :LspDefinition<CR>
+nnoremap refs :LspReferences<CR>
+
+" For Ruby LS
+" solargraph config command for project setup
+" If it is Rails project, see https://github.com/castwide/solargraph/issues/87
+" for comfortable coding.
+if executable('solargraph')
+    " gem install solargraph
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'solargraph',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
+        \ 'initialization_options': {"diagnostics": "true"},
+        \ 'whitelist': ['ruby'],
+        \ })
+endif
