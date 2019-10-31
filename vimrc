@@ -66,6 +66,16 @@ if executable('solargraph')
         \ })
 endif
 
+" For python
+" pip install python-language-server
+if executable('pyls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+
 " Toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
 " Open Filer when current directory is Git repository and focus main window.
