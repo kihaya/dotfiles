@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
    Plug 'prabirshrestha/async.vim'
    Plug 'prabirshrestha/asyncomplete.vim'
    Plug 'prabirshrestha/asyncomplete-lsp.vim'
+   Plug 'scrooloose/nerdtree'
 call plug#end()
 
 set laststatus=2
@@ -64,3 +65,9 @@ if executable('solargraph')
         \ 'whitelist': ['ruby'],
         \ })
 endif
+
+" Toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+" Open Filer when current directory is Git repository and focus main window.
+autocmd VimEnter * if isdirectory(".git") && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * wincmd p
