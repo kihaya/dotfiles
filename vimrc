@@ -27,6 +27,7 @@ call plug#begin('~/.vim/plugged')
    Plug 'prabirshrestha/async.vim'
    Plug 'prabirshrestha/asyncomplete.vim'
    Plug 'prabirshrestha/asyncomplete-lsp.vim'
+   Plug 'scrooloose/nerdtree'
 call plug#end()
 
 set laststatus=2
