@@ -6,6 +6,8 @@ set showmatch "対応するカッコの表示
 set nobackup "バックアップをつくらない
 set noswapfile "swpファイルをつくらない
 set autoread "編集ファイル自動読み込み
+set mouse=a "全モードでマウス操作を有効にする
+set ttymouse=xterm
 syntax on "コードハイライトを有効
 
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
