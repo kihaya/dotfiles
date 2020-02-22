@@ -10,6 +10,8 @@
 	ff = false
 [pull]
 	ff = only
+[rebase]
+	autoStash = true
 [alias]
         st  = status
         sts = status --short
