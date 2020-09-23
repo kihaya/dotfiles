@@ -12,18 +12,18 @@
      javascript
      yaml
      python
+     lsp
      (ruby :variables
-           ruby-enable-ruby-on-rails-support t
-           ruby-enable-enh-ruby-mode t
-           ruby-version-manager 'rbenv
-           ruby-test-runner 'rspec
+           ruby-backend 'lsp
            )
-     ruby-on-rails
-     ivy
      (auto-completion :variables
+                      auto-completion-idle-delay 0.0
+                      auto-completion-minimum-prefix-length 1
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-help-tooltip t
-                      auto-completion-enable-sort-by-usage t)
+                      auto-completion-use-company-box nil)
+     ruby-on-rails
+     ivy
      emacs-lisp
      git
      shell
@@ -55,6 +55,7 @@
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-colorize-cursor-according-to-state t
+   dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
    dotspacemacs-default-font '("Source Code Pro"
                                :size 13
                                :weight normal
