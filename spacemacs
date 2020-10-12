@@ -16,6 +16,11 @@
      (ruby :variables
            ruby-backend 'lsp
            )
+     (scala :variables
+            scala-backend 'scala-metals
+            scala-auto-start-backend t
+            scala-enable-eldoc t
+           )
      (auto-completion :variables
                       auto-completion-idle-delay 0.0
                       auto-completion-minimum-prefix-length 1
