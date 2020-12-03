@@ -14,6 +14,7 @@
      python
      lsp
      (ruby :variables
+           ruby-version-manager 'rbenv
            ruby-backend 'lsp
            )
      (scala :variables
